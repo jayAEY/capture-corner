@@ -49,14 +49,33 @@ header{
     }
 }
 
-  .menu-toggle{
+  .mobile-menu-toggle{
     place-self: end;
     cursor: pointer;
     color: $secondary-orange;
   }
-  .menu-toggle:hover {
+  .mobile-menu-toggle:hover {
     color: $main-text-navy;
     transition: all 0.3s ease-in-out;
+  }
+
+
+  nav {
+    padding-top: 10px;
+    text-decoration: none;
+  
+    a,a:visited{
+      color: $main-text-navy;
+      font-weight: 700;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    a:hover {
+      color: $secondary-orange;
+      transition: all 0.3s ease-in-out;
+  
+    }
   }
 
   #mobile-nav {
@@ -69,18 +88,7 @@ header{
         padding: 20px 2px;
         width: 100%;
         text-align: left;
-        color: $main-text-navy;
-        font-weight: 700;
-        letter-spacing: 5px;
-        text-transform: uppercase;
-        text-decoration: none;
       }
-      a:hover {
-        color: $secondary-orange;
-        transition: all 0.3s ease-in-out;
-    
-      }
-    
       
       .sm-links{
         padding-top: 20px;
@@ -93,74 +101,47 @@ header{
         font-weight: 700;
       }
     }
-
-// nav {
-//   display: flex;
-//   padding-top: 10px;
-//   text-decoration: none;
-
-//   a,a:visited{
-//     color: $main-text-navy;
-//     font-weight: 700;
-//     letter-spacing: 5px;
-//     text-transform: uppercase;
-//     text-decoration: none;
-//   }
-//   a:hover {
-//     color: $secondary-orange;
-//     transition: all 0.3s ease-in-out;
-
-//   }
-
-// #desktop-nav {
-//   display: none;
-// }
-
-// #mobile-nav {
-//   flex-direction: column;
-
-//   a,a:visited{
-//     padding: 20px 2px;
-//     width: 100%;
-//     text-align: left;
-//     color: $main-text-navy;
-//     font-weight: 700;
-//     letter-spacing: 5px;
-//     text-transform: uppercase;
-//     text-decoration: none;
-//   }
-//   a:hover {
-//     color: $secondary-orange;
-//     transition: all 0.3s ease-in-out;
-
-//   }
-
-  
-//   .sm-links{
-//     padding-top: 20px;
-//     display: flex;
-//     flex-direction: column; 
-//     gap: 20px;
-//     font-family:"Dancing Script", cursive;
-//     font-size: xx-large;
-//     color: $secondary-orange;
-//     font-weight: 700;
-//   }
-// }
-
-// }
+   
+    #desktop-nav {
+      display: none; 
+     }
 }
 
 @media screen and (min-width:450px) {
+  header {
   #open,#close{
     display: none;
   }
-
 
   #mobile-nav {
     visibility: hidden;
     height: 0;
   }
+
+  #desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    a{
+      font-size: x-small;
+    }
+    .sm-links{
+      display: flex;
+      align-items: center;
+      gap:10px;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-family:"Dancing Script", cursive;
+      font-size: large;
+      color: $secondary-orange;
+      font-weight: 700;
+      svg{
+        scale: 0.6;
+        margin-left: -8px;
+      }
+    }
+  }
+}
 
   // #mobile-nav {
   //   display: flex;
