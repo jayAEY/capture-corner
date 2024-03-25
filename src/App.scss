@@ -61,7 +61,7 @@ header{
 
 
   nav {
-    padding-top: 10px;
+    padding-top: 20px;
     text-decoration: none;
   
     a,a:visited{
@@ -107,76 +107,110 @@ header{
      }
 }
 
-@media screen and (min-width:450px) {
-  header {
-  #open,#close{
-    display: none;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100svw;
+  height: 100%;
+  margin-top: 20px;
+  padding:0 35px;
+  gap: 20px;
+
+  .photo{
+    width: 90%;
+    object-fit: cover;
+    border: rgba(255, 255, 255, 0.585) 15px solid;
   }
 
-  #mobile-nav {
-    visibility: hidden;
-    height: 0;
+  .script-highlight {
+    font-family:"Dancing Script", cursive;
+    font-weight: 700;
+    letter-spacing:normal;
+    font-size: 28pt;
+    text-transform: none;
+
   }
 
-  #desktop-nav {
+  h1 { 
+    color: $main-text-navy;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    // line-height: 1;
+    // font-family: "Concert One", sans-serif;
+ }
+
+ p {
+  font-size: medium;
+  line-height: 1.5;
+  color: grey;
+ }
+
+  .hero {
+    text-align: center;
+  }
+
+  .work-preview {
     display: flex;
-    justify-content: space-between;
-    a{
-      font-size: x-small;
-    }
-    .sm-links{
-      display: flex;
-      align-items: center;
-      gap:10px;
-      position: absolute;
-      right: 20px;
-      top: 20px;
-      font-family:"Dancing Script", cursive;
-      font-size: large;
-      color: $secondary-orange;
-      font-weight: 700;
-      svg{
-        scale: 0.6;
-        margin-left: -8px;
-      }
+    justify-content: center;
+    text-align: center;
+    width: 100svw;
+    background-color: white;
+    padding: 20px;
+
+    h1 {
+      max-width: 230px;
     }
   }
+
 }
 
-  // #mobile-nav {
-  //   display: flex;
-  //   flex-direction: column;
-  //   padding-top: 10px;
-  //   text-decoration: none;
-  
-  //   a,a:visited{
-  //     padding: 20px 2px;
-  //     width: 100%;
-  //     text-align: left;
-  //     color: $main-text-navy;
-  //     font-weight: 700;
-  //     letter-spacing: 5px;
-  //     text-transform: uppercase;
-  //     text-decoration: none;
-  //   }
-  //   a:hover {
-  //     color: $secondary-orange;
-  //     transition: all 0.3s ease-in-out;
-  
-  //   }
-  
-    
-  //   .sm-links{
-  //     padding-top: 20px;
-  //     display: flex;
-  //     flex-direction: column; 
-  //     gap: 20px;
-  //     font-family:"Dancing Script", cursive;
-  //     font-size: xx-large;
-  //     color: $secondary-orange;
-  //     font-weight: 700;
-  //   }
-  // }
-  
+
+@media screen and (min-width:750px) {
+  header {
+    #open,#close{
+      display: none;
+    }
+
+    #mobile-nav {
+      visibility: hidden;
+      height: 0;
+    }
+
+    #desktop-nav {
+      width: 90%;
+      max-width: 800px;
+      display: flex;
+      justify-content: space-between;
+      justify-self: center;
+      align-self: center;
+        a {
+          font-size: x-small;
+        }
+
+        .sm-links{
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          position: absolute;
+          right: 20px;
+          top: 20px;
+          font-family:"Dancing Script", cursive;
+          font-size: medium;
+          color: $secondary-orange;
+          font-weight: 700;
+
+            svg{
+              scale: 0.5;
+              margin-top: 5px;
+              margin-left: -10px;
+            }
+
+          }
+    }
+}
+
 }
 
