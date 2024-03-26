@@ -2,7 +2,7 @@
 
 *,
 *::after,
-*::before{
+*::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -13,7 +13,7 @@ $main-text-navy:rgb(79, 119, 202);
 $secondary-orange:#CD8C2A;
 $off-white:#f6f1f1;
 
-:root{
+:root {
   background-color: $base-beige;
   height: 100svh;
   width: 100svw;
@@ -28,7 +28,7 @@ header{
   background-color: $off-white;
   padding: 20px;
   
-  #logo{
+  #logo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,7 +49,7 @@ header{
     }
 }
 
-  .mobile-menu-toggle{
+  .mobile-menu-toggle {
     place-self: end;
     cursor: pointer;
     color: $secondary-orange;
@@ -64,7 +64,7 @@ header{
     padding-top: 20px;
     text-decoration: none;
   
-    a,a:visited{
+    a,a:visited {
       color: $main-text-navy;
       font-weight: 700;
       letter-spacing: 5px;
@@ -74,11 +74,11 @@ header{
     a:hover {
       color: $secondary-orange;
       transition: all 0.3s ease-in-out;
-  
     }
   }
 
   #mobile-nav {
+      height: 675px;
       display: flex;
       flex-direction: column;
       padding-top: 10px;
@@ -112,24 +112,14 @@ main {
   flex-direction: column;
   align-items: center;
   width: 100svw;
-  height: 100%;
-  margin-top: 20px;
+  // height: 100%;
+  // margin-top: 20px;
   padding:0 35px;
-  gap: 20px;
 
-  .photo{
+  .photo {
     width: 90%;
     object-fit: cover;
     border: rgba(255, 255, 255, 0.585) 15px solid;
-  }
-
-  .script-highlight {
-    font-family:"Dancing Script", cursive;
-    font-weight: 700;
-    letter-spacing:normal;
-    font-size: 28pt;
-    text-transform: none;
-
   }
 
   h1 { 
@@ -138,33 +128,101 @@ main {
     letter-spacing: 5px;
     text-transform: uppercase;
     text-decoration: none;
-    // line-height: 1;
-    // font-family: "Concert One", sans-serif;
- }
+    font-family: "Concert One", sans-serif;
+  }
 
- p {
-  font-size: medium;
-  line-height: 1.5;
-  color: grey;
- }
+  p {
+    font-size: medium;
+    line-height: 1.5;
+    color: grey;
+  }
 
-  .hero {
+ .script-highlight {
+  font-family:"Dancing Script", cursive;
+  font-weight: 700;
+  letter-spacing:normal;
+  font-size: 28pt;
+  text-transform: none;
+  }
+
+  .hero {  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    gap: 20px;
+    padding: 35px 0;
   }
 
   .work-preview {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    text-align: center;
+    align-items: center;
     width: 100svw;
     background-color: white;
-    padding: 20px;
+    padding:35px;
+    text-align: center;
+    gap: 20px;
 
-    h1 {
-      max-width: 230px;
+      h2 {
+        font-family: "Concert One", sans-serif;
+        display: flex;
+        color: $main-text-navy;
+        font-weight: 400;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        max-width: 210px;
+        margin-left: -20px;
+        padding-bottom: 10px;
+        align-items: center;
+        border-bottom: $secondary-orange dotted 2px;
+      }
+
+      svg {
+        scale: 2;
+      }
+
+      .work-label {
+        color: $base-beige;
+        background-color: $main-text-navy;
+        padding: 10px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-top: -65px;
+      }
+    
     }
-  }
 
+  .banner{ 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    .banner-img {
+      position: relative;
+      width: 100svw;
+      object-fit: contain;
+      z-index: -1;
+      filter :brightness(0.8)
+    }
+
+    .banner-text {
+      width: min-content;
+      position: absolute;
+      font-family:"Dancing Script", cursive;
+      font-weight: 700;
+      font-size: 34pt;
+      z-index: 1;
+      color: $off-white;
+      padding-bottom: 16px;
+      border-bottom :$secondary-orange 3px dotted;
+    }
+
+  }
 }
 
 
