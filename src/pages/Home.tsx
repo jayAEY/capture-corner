@@ -2,6 +2,7 @@ import "../App.scss";
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa6";
+import Footer from "../components/Footer";
 
 function App() {
   return (
@@ -62,26 +63,7 @@ function App() {
         />
         <h2 className="banner-text">Create Unforgettable Memories</h2>
       </section>
-      <section className="footer">
-        <h2> Catch us on instagram</h2>
-        <div className="social-posts-footer">
-          <img
-            className="social-preview-img"
-            src="photos/benjamin-davies-Zm2n2O7Fph4-unsplash.jpg"
-            alt="Field of grass during sunset."
-          />
-          <img
-            className="social-preview-img"
-            src="photos/benjamin-davies-Zm2n2O7Fph4-unsplash.jpg"
-            alt="Field of grass during sunset."
-          />
-          <img
-            className="social-preview-img"
-            src="photos/benjamin-davies-Zm2n2O7Fph4-unsplash.jpg"
-            alt="Field of grass during sunset."
-          />
-        </div>
-      </section>
+      <Footer />
     </main>
   );
 }
