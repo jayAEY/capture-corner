@@ -7,6 +7,7 @@ import Work from "./pages/Work";
 import Blog from "./pages/Blog";
 import Contact from "./pages/contact";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           element={<Contact />}
         ></Route>
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

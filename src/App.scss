@@ -140,7 +140,7 @@ main {
  .script-highlight {
   font-family:"Dancing Script", cursive;
   font-weight: 700;
-  letter-spacing:normal;
+  letter-spacing: normal;
   font-size: 28pt;
   text-transform: none;
   }
@@ -222,33 +222,51 @@ main {
       border-bottom :$secondary-orange 3px dotted;
     }
   }
+}
 
-  .footer {
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 30px;
+  text-align: center;
+  align-items: center;
+
+  h3 {
+    font-family: "Concert One", sans-serif;
+    color: $main-text-navy;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    max-width: 210px;
+  }
+
+  .social-posts-footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+      img {
+        width: 25vw;
+        height: 25vw;
+        object-fit: cover;
+      }
+  }
+
+  .banner { 
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding-top: 30px;
     text-align: center;
+    justify-content: center;
     align-items: center;
 
-    h3 {
-      font-family: "Concert One", sans-serif;
-      color: $main-text-navy;
-      font-weight: 400;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      max-width: 210px;
-    }
-    .social-posts-footer {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-
-        img {
-          width: 25vw;
-          height: 25vw;
-          object-fit: cover;
-        }
+    .banner-img {
+      position: relative;
+      width: 100svw;
+      object-fit: contain;
+      z-index: -1;
+      filter :brightness(0.8)
     }
 
     .banner-text{
@@ -256,18 +274,73 @@ main {
       flex-direction: column;
       color: $off-white;
       width: 60vw;
+      position: absolute;
+      font-family:"Dancing Script", cursive;
+      font-weight: 700;
+      font-size: 34pt;
+      z-index: 1;
+      padding-bottom: 16px;
+      border-bottom :$secondary-orange 3px dotted;
 
       a, a:visited{
         color: inherit;
+        text-align: center;
         text-decoration: none;
       }
-    }  
-
-  
-
+    }
   }
 
 }
+
+#meet-page {
+  .about-photos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background-color: $off-white;
+    width: 100vw;
+  
+    img {
+      width: 90vw;
+      height: 90vw;
+      border: none;
+      padding-bottom: 20px;
+    }
+
+    h2 {
+      font-size: x-small;
+      font-weight: 900;
+      color: $main-text-navy; 
+      text-transform: uppercase;
+      letter-spacing: 5px;
+    }
+    
+    .script-highlight{
+      color: $secondary-orange;
+    }
+
+    p {
+      margin:30px 0;
+    }
+
+    .next {
+      display: flex;
+      align-items: center;
+      border: none;
+      background-color: inherit;
+      font-size: x-small;
+      font-weight: 900;
+      color: $main-text-navy; 
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      cursor: pointer;
+    }
+
+  }
+}
+
 
 
 @media screen and (min-width:750px) {

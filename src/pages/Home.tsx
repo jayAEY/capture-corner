@@ -63,7 +63,6 @@ function App() {
         />
         <h2 className="banner-text">Create Unforgettable Memories</h2>
       </section>
-      <Footer />
     </main>
   );
 }
