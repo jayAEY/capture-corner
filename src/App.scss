@@ -9,9 +9,10 @@
 }
 
 $base-beige:#EEEBE0;
-$main-text-navy:rgb(79, 119, 202);
+$main-text-navy:#4f77ca;
 $secondary-orange:#CD8C2A;
 $off-white:#f6f1f1;
+$teal-highlight:#8cdfd4;
 
 :root {
   background-color: $base-beige;
@@ -337,7 +338,78 @@ main {
       letter-spacing: 5px;
       cursor: pointer;
     }
+  }
+}
 
+#details-page{
+  .hero {
+    img {
+      width: 90vw;
+      border: none;
+    }
+
+    h2 {
+      font-size: x-small;
+      font-weight: 900;
+      color: $main-text-navy; 
+      text-transform: uppercase;
+      letter-spacing: 5px;
+    }
+    
+    .script-highlight{
+      color: $secondary-orange;
+    }
+  }
+
+  .services {
+    display: flex;
+    flex-direction: column; 
+    gap: 40px;
+    background-color: white;
+    width: 100vw;
+    padding:30px;
+    text-align: center;
+
+    h1 {
+      border-bottom: $secondary-orange dotted 2px;
+      padding-bottom: 16px;
+    }
+
+    .package {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+
+      .number {
+        color: $teal-highlight;
+        font-weight: 900;
+        font-size: x-large;
+      }
+
+      .package-title{
+        font-family:"Dancing Script", cursive;
+        color: $secondary-orange;
+        font-size: xx-large;
+      }
+
+      .price {
+        padding: 10px 15px;
+        width: max-content;
+        background-color: $main-text-navy;
+        color: $off-white;
+        font-size: small;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
+    }
+
+    h2 {
+      color: $secondary-orange;
+      font-family:"Dancing Script", cursive;
+      font-size: 3rem;
+      line-height: 0.7;
+    }
   }
 }
 
