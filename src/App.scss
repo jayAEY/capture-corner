@@ -226,20 +226,45 @@ main {
   .footer {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 30px;
+    gap: 20px;
+    padding-top: 30px;
     text-align: center;
+    align-items: center;
 
+    h3 {
+      font-family: "Concert One", sans-serif;
+      color: $main-text-navy;
+      font-weight: 400;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      max-width: 210px;
+    }
     .social-posts-footer {
       display: flex;
-      gap: 10px;
-        img {
-          width: 30vw;
-          height: 30vw;
-          object-fit: fill;
+      justify-content: center;
+      gap: 15px;
 
+        img {
+          width: 25vw;
+          height: 25vw;
+          object-fit: cover;
         }
     }
+
+    .banner-text{
+      display: flex;
+      flex-direction: column;
+      color: $off-white;
+      width: 60vw;
+
+      a, a:visited{
+        color: inherit;
+        text-decoration: none;
+      }
+    }  
+
+  
+
   }
 
 }
