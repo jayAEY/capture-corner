@@ -22,7 +22,7 @@ $teal-highlight:#8cdfd4;
 
 }
 
-header{
+header {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -410,6 +410,43 @@ main {
       font-size: 3rem;
       line-height: 0.7;
     }
+  }
+}
+
+#work-page {
+  width: 100svw;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px;
+  gap: 40px;
+  background-color: white;
+
+
+  h1 {
+    width: max-content;
+    text-transform: none;
+    letter-spacing: normal;
+    color: $secondary-orange;
+    font-family:"Dancing Script", cursive;
+    font-size: 3rem;
+    font-weight: 900;
+    padding-bottom: 20px;
+    border-bottom :$secondary-orange 3px dotted;
+
+  }
+
+  .work-img {
+    width: 90svw;
+    height: 90svw;
+    object-fit: cover;
+    border: rgba(255, 255, 255, 0.585) 15px solid;
+  }
+
+  .work-h2 {
+      font-family: "Concert One", sans-serif;
+      margin-top: -30px;
+      color: $main-text-navy;
   }
 }
 

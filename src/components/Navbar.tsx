@@ -41,12 +41,42 @@ const Navbar = () => {
       </div>
       {mobileMenu && (
         <nav id="mobile-nav">
-          <Link to="/">Home</Link>
-          <Link to="/meet">Meet Us</Link>
-          <Link to="/details">Details</Link>
-          <Link to="/work">Our Work</Link>
-          <Link to="/blog">Blog</Link>
-          <Link to="/contact">Contact Us</Link>
+          <Link
+            to="/"
+            onClick={() => setMobileMenu(false)}
+          >
+            Home
+          </Link>
+          <Link
+            to="/meet"
+            onClick={() => setMobileMenu(false)}
+          >
+            Meet Us
+          </Link>
+          <Link
+            to="/details"
+            onClick={() => setMobileMenu(false)}
+          >
+            Details
+          </Link>
+          <Link
+            to="/work"
+            onClick={() => setMobileMenu(false)}
+          >
+            Our Work
+          </Link>
+          <Link
+            to="/blog"
+            onClick={() => setMobileMenu(false)}
+          >
+            Blog
+          </Link>
+          <Link
+            to="/contact"
+            onClick={() => setMobileMenu(false)}
+          >
+            Contact Us
+          </Link>
           <section className="sm-links">
             <p>Follow Us</p>
             <div className="icons">
