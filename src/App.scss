@@ -433,7 +433,6 @@ main {
     font-weight: 900;
     padding-bottom: 20px;
     border-bottom :$secondary-orange 3px dotted;
-
   }
 
   .work-img {
@@ -450,6 +449,89 @@ main {
   }
 }
 
+#contact-page {
+  width: 100svw;
+  height: 100svh;
+  background-image: url("../photos/kevin-delvecchio-7noZJ_4nhU8-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  justify-content: center;
+  text-align: center;
+
+  .contact-main {
+    display: flex;
+    width: 95%;
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+    background-color: $base-beige;
+
+    
+    .h1-first-line {
+      font-family: "Montserrat", sans-serif;
+      font-size: x-small;
+      font-weight: 900;
+      color: $main-text-navy; 
+      text-transform: uppercase;
+      letter-spacing: 5px;
+    }
+
+    .h1-second-line{
+        width: max-content;
+        text-transform: none;
+        letter-spacing: normal;
+        color: $secondary-orange;
+        font-family:"Dancing Script", cursive;
+        font-size: 3rem;
+        font-weight: 900;
+        padding-bottom: 15px;
+        border-bottom :$secondary-orange 3px dotted;
+    }
+    
+    h2 {
+      font-family: "Concert One", sans-serif;
+      color: $main-text-navy;
+      font-weight: 400;
+      padding: 20px 0;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      max-width: 210px;
+    }
+
+    input, #package{
+      display: flex;
+      width: 95%;
+      padding: 10px;
+      margin: 10px 0;
+      border:none;
+      color: $off-white;
+      background-color: $secondary-orange;
+    }
+
+    #package {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    #submit {
+      position: absolute;
+      top: 113%;
+      width: max-content;
+      border: none;
+      background-color: $main-text-navy;
+      color: $off-white;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      font-weight: 900;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+  }
+
+  #submit-success {
+    display: none;
+  }
+}
 
 
 @media screen and (min-width:750px) {
@@ -486,7 +568,7 @@ main {
           color: $secondary-orange;
           font-weight: 700;
 
-            svg{
+            svg {
               scale: 0.5;
               margin-top: 5px;
               margin-left: -10px;
