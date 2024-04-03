@@ -1,7 +1,14 @@
 import { FaArrowRight } from "react-icons/fa";
 import { useState } from "react";
 const Meet = () => {
-  let photoInfo = [
+  type photo = {
+    love: string;
+    p: string;
+    src: string;
+    alt: string;
+  };
+
+  let photoInfo: photo[] = [
     {
       love: "summer days",
       p: "It's a season of joy, laughter, and cherished moments that remind me to savor each precious moment and appreciate the beauty of the world we have around us.",
