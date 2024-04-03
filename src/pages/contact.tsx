@@ -1,19 +1,22 @@
-import React from "react";
+import { useRef } from "react";
 
 const contact = () => {
-  function handleSubmit(e) {
+  const formElement = useRef<HTMLFormElement>(null);
+  const submitSection = useRef<HTMLElement>(null);
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    let form = document.querySelector("#contact-form");
-    let submitSection = document.querySelector("#submit-success");
-    form.style.display = "none";
-    submitSection.style.display = "flex";
+    formElement.current && (formElement.current.style.display = "none");
+    submitSection.current && (submitSection.current.style.display = "none");
   }
+
   return (
     <main id="contact-page">
       <form
         id="contact-form"
+        ref={formElement}
         className="contact-main"
-        onSubmit={(e) => handleSubmit(e)}
+        onSubmit={handleSubmit}
       >
         <h1 className="h1-first-line">contact us</h1>
         <h1 className="h1-second-line">say hi!</h1>
@@ -62,6 +65,7 @@ const contact = () => {
         </button>
       </form>
       <section
+        ref={submitSection}
         id="submit-success"
         className="contact-main"
       >

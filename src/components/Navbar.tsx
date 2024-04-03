@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   FaBars,
   FaSnapchat,
@@ -9,15 +9,8 @@ import {
   FaXmark,
 } from "react-icons/fa6";
 
-// import navbar from "../styles/navbar.scss";
-// import "../styles/navbar.scss";
-// import "../App.scss";
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
-
-  // useEffect(() => {
-  //   window.addEventListener("resize", console.log(window.innerWidth));
-  // }, []);
 
   return (
     <header>
@@ -64,12 +57,6 @@ const Navbar = () => {
             onClick={() => setMobileMenu(false)}
           >
             Our Work
-          </Link>
-          <Link
-            to="/blog"
-            onClick={() => setMobileMenu(false)}
-          >
-            Blog
           </Link>
           <Link
             to="/contact"

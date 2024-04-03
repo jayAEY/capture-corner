@@ -1,5 +1,3 @@
-import React from "react";
-
 const Work = () => {
   return (
     <main id="work-page">

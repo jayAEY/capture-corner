@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import Meet from "./pages/Meet";
 import Details from "./pages/Details";
 import Work from "./pages/Work";
-import Blog from "./pages/Blog";
 import Contact from "./pages/contact";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -29,10 +28,6 @@ function App() {
         <Route
           path="/work"
           element={<Work />}
-        ></Route>
-        <Route
-          path="/blog"
-          element={<Blog />}
         ></Route>
         <Route
           path="/contact"

@@ -1,8 +1,5 @@
 import "../App.scss";
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa6";
-import Footer from "../components/Footer";
 
 function App() {
   return (
