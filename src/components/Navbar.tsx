@@ -27,11 +27,13 @@ const Navbar = () => {
           onClick={() => setMobileMenu(true)}
         />
       )}
-      <div id="logo">
-        <h1>📸</h1>
-        <h1>CaptureCorner</h1>
-        <h2>Photo Co.</h2>
-      </div>
+      <Link to="/">
+        <div id="logo">
+          <h1>📸</h1>
+          <h1>CaptureCorner</h1>
+          <h2>Photo Co.</h2>
+        </div>
+      </Link>
       {mobileMenu && (
         <nav id="mobile-nav">
           <Link

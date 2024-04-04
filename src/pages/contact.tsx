@@ -1,13 +1,13 @@
 import { useRef } from "react";
 
-const contact = () => {
+const Contact = () => {
   const formElement = useRef<HTMLFormElement>(null);
   const submitSection = useRef<HTMLElement>(null);
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     formElement.current && (formElement.current.style.display = "none");
-    submitSection.current && (submitSection.current.style.display = "none");
+    submitSection.current && (submitSection.current.style.display = "flex");
   }
 
   return (
@@ -77,4 +77,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;

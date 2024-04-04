@@ -32,25 +32,35 @@ function App() {
         </p>
       </section>
       <section className="work-preview">
-        <h2>
-          Let's have some fun! <FaArrowRight />
-        </h2>
-        <p>
-          Explore a diverse collection of images. Each photograph tells a unique
-          story.
-        </p>
-        <img
-          className="photo"
-          src="photos/patty-brito-eHOZjZEx7u8-unsplash.jpg"
-          alt="Brother hugging his little sister in a field"
-        />
-        <h3 className="work-label">Children</h3>
-        <img
-          className="photo"
-          src="photos/kelly-sikkema-WvVyudMd1Es-unsplash.jpg"
-          alt="Parents adoring their newborn baby"
-        />
-        <h3 className="work-label">Family</h3>
+        <div className="work-preview-text">
+          <h2>
+            Let's have some fun! <FaArrowRight />
+          </h2>
+          <p>
+            With a keen eye for detail and a creative approach, we strive to
+            capture the essence and emotion of every subject we photograph.
+            Explore a diverse collection of images. Whether you're looking for a
+            professional portrait session, wedding coverage, or creative event
+            photography, I offer a range of services tailored to meet your
+            needs. Each photograph tells a unique story.
+          </p>
+        </div>
+        <div className="photo-div">
+          <img
+            className="photo"
+            src="photos/patty-brito-eHOZjZEx7u8-unsplash.jpg"
+            alt="Brother hugging his little sister in a field"
+          />
+          <h3 className="work-label">Children</h3>
+        </div>
+        <div className="photo-div">
+          <img
+            className="photo"
+            src="photos/kelly-sikkema-WvVyudMd1Es-unsplash.jpg"
+            alt="Parents adoring their newborn baby"
+          />
+          <h3 className="work-label">Family</h3>
+        </div>
       </section>
       <section className="banner">
         <img

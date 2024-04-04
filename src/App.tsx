@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Meet from "./pages/Meet";
 import Details from "./pages/Details";
 import Work from "./pages/Work";
-import Contact from "./pages/contact";
+import Contact from "./pages/Contact.tsx";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 

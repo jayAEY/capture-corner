@@ -21,6 +21,9 @@ $teal-highlight:#8cdfd4;
   font-family: "Montserrat", sans-serif;
 
 }
+a {
+  text-decoration: none;
+}
 
 header {
   display: flex;
@@ -34,6 +37,7 @@ header {
     flex-direction: column;
     align-items: center;
     line-height: 1.1;
+    
     h1{
       font-family: "Concert One", sans-serif;
       font-size: 2rem;
@@ -70,7 +74,6 @@ header {
       font-weight: 700;
       letter-spacing: 5px;
       text-transform: uppercase;
-      text-decoration: none;
     }
     a:hover {
       color: $secondary-orange;
@@ -113,8 +116,6 @@ main {
   flex-direction: column;
   align-items: center;
   width: 100svw;
-  // height: 100%;
-  // margin-top: 20px;
   padding:0 35px;
 
   .photo {
@@ -166,6 +167,12 @@ main {
     text-align: center;
     gap: 20px;
 
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
       h2 {
         font-family: "Concert One", sans-serif;
         display: flex;
@@ -175,9 +182,14 @@ main {
         text-transform: uppercase;
         max-width: 210px;
         margin-left: -20px;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
         align-items: center;
         border-bottom: $secondary-orange dotted 2px;
+      }
+
+      p {
+        padding-top: 20px;
+        max-width: 400px;
       }
 
       svg {
@@ -191,7 +203,7 @@ main {
         letter-spacing: 5px;
         text-transform: uppercase;
         text-decoration: none;
-        margin-top: -65px;
+        margin-top: -35px;
       }
     
     }
@@ -223,74 +235,6 @@ main {
       border-bottom :$secondary-orange 3px dotted;
     }
   }
-}
-
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-top: 30px;
-  text-align: center;
-  align-items: center;
-
-  h3 {
-    font-family: "Concert One", sans-serif;
-    color: $main-text-navy;
-    font-weight: 400;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    max-width: 210px;
-  }
-
-  .social-posts-footer {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-
-      img {
-        width: 25vw;
-        height: 25vw;
-        object-fit: cover;
-      }
-  }
-
-  .banner { 
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-
-    .banner-img {
-      position: relative;
-      width: 100svw;
-      object-fit: contain;
-      z-index: -1;
-      filter :brightness(0.8)
-    }
-
-    .banner-text{
-      display: flex;
-      flex-direction: column;
-      color: $off-white;
-      width: 60vw;
-      position: absolute;
-      font-family:"Dancing Script", cursive;
-      font-weight: 700;
-      font-size: 34pt;
-      z-index: 1;
-      padding-bottom: 16px;
-      border-bottom :$secondary-orange 3px dotted;
-
-      a, a:visited{
-        color: inherit;
-        text-align: center;
-        text-decoration: none;
-      }
-    }
-  }
-
 }
 
 #meet-page {
@@ -533,6 +477,82 @@ main {
   }
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 30px;
+  text-align: center;
+  align-items: center;
+
+  h3 {
+    font-family: "Concert One", sans-serif;
+    color: $main-text-navy;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    max-width: 210px;
+  }
+
+  .social-posts-footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+      img {
+        width: 25vw;
+        height: 25vw;
+        object-fit: cover;
+      }
+  }
+
+  .banner { 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    .banner-img {
+      position: relative;
+      width: 100svw;
+      object-fit: contain;
+      z-index: -1;
+      filter :brightness(0.8)
+    }
+
+    .banner-text {
+      width: 260px;
+      display: flex;
+      flex-direction: column;
+      color: $off-white;
+      position: absolute;
+      font-family:"Dancing Script", cursive;
+      font-weight: 700;
+      font-size: 34pt;
+      z-index: 1;
+      padding-bottom: 16px;
+      border-bottom :$secondary-orange 3px dotted;
+
+      a, a:visited {
+        color: inherit;
+        text-align: center;
+      }
+    }
+
+    .banner-h3 {
+      max-width: 100%;
+      font-size: 1.5rem;
+      margin-top: -50px;
+      color: $off-white;
+    }
+  }
+}
+
+#desktop-footer {
+  display: none;
+}
+
 
 @media screen and (min-width:750px) {
   header {
@@ -553,7 +573,7 @@ main {
       justify-self: center;
       align-self: center;
         a {
-          font-size: x-small;
+          font-size: xx-small;
         }
 
         .sm-links{
@@ -577,6 +597,125 @@ main {
           }
     }
 }
+
+
+
+  main, footer {
+    .banner {
+      .banner-img { 
+        height: 250px;
+        width: 100svw;
+        object-fit: cover;
+      }
+        .banner-text {
+          width: max-content;
+
+          a, a:visited {
+            // max-width: 100vw;
+            // width: 100vw;
+          }
+        }
+    }
+  }
+
+  main {
+    .work-preview {
+      padding: 6%;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+        .photo {
+          width: 100%;
+        }
+
+        .work-preview-text {
+          text-align: left;
+        }
+
+        h2 {
+          // max-width: 400px;
+        }
+  
+        svg {
+          // padding-left: 10px;
+        }      
+      }
+  }
+  
+  #mobile-footer {
+    display: none;
+  }
+
+  #desktop-footer {
+    display: flex;
+    flex-direction: column;
+  // }
+
+  // footer {
+    // display: flex;
+    // flex-direction: column;
+    // gap: 20px;
+    // padding-top: 30px;
+    // text-align: center;
+    // align-items: center;
+  
+    h3 {
+      // font-family: "Concert One", sans-serif;
+      // color: $main-text-navy;
+      // font-weight: 400;
+      // letter-spacing: 5px;
+      // text-transform: uppercase;
+      // max-width: 210px;
+    }
+  
+    .social-posts-footer {
+      // display: flex;
+      // justify-content: center;
+      // gap: 15px;
+  
+        img {
+        //   width: 25vw;
+        //   height: 25vw;
+        //   object-fit: cover;
+         }
+    }
+  
+    .banner { 
+      // display: flex;
+      // flex-direction: column;
+      // text-align: center;
+      // justify-content: center;
+      // align-items: center;
+  
+      .banner-img {
+        display: none;
+        // position: relative;
+        // width: 100svw;
+        // object-fit: contain;
+        // z-index: -1;
+        // filter :brightness(0.8)
+      }
+  
+      .banner-text {
+        // width: 260px;
+        // display: flex;
+        // flex-direction: column;
+        // color: $off-white;
+        // position: absolute;
+        // font-family:"Dancing Script", cursive;
+        // font-weight: 700;
+        // font-size: 34pt;
+        // z-index: 1;
+        // padding-bottom: 16px;
+        // border-bottom :$secondary-orange 3px dotted;
+  
+        a, a:visited {
+          // color: inherit;
+          // text-align: center;
+        }
+      }
+    }
+  
+  }
 
 }
 
