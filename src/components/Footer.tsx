@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
-import { FaArrowRight } from "react-icons/fa6";
+import {
+  FaArrowRight,
+  FaFacebook,
+  FaInstagram,
+  FaPinterest,
+  FaSnapchat,
+} from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -45,13 +51,29 @@ const Footer = () => {
       </footer>
       <footer id="desktop-footer">
         <section className="footer-area">
-          <h2 className="footer-area-text">
+          <h2 className="footer-area-text">A little bit more</h2>
+          <h3 className="banner-h3">
             <Link to="/meet">
-              A little bit more
-              <FaArrowRight size={"30px"} />
+              About us <FaArrowRight size={"30px"} />
             </Link>
-          </h2>
-          <h3 className="banner-h3">About us</h3>
+          </h3>
+          <section className="sm-links">
+            <p>Follow Us</p>
+            <div className="icons">
+              <a href="https://www.snapchat.com">
+                <FaSnapchat size={30} />
+              </a>
+              <a href="https://instagram.com">
+                <FaInstagram size={30} />
+              </a>
+              <a href="https://facebook.com">
+                <FaFacebook size={30} />
+              </a>
+              <a href="https://pinterest.com">
+                <FaPinterest size={30} />
+              </a>
+            </div>
+          </section>
         </section>
         <section className="footer-social-area">
           <h3> Catch us on instagram</h3>
@@ -80,12 +102,16 @@ const Footer = () => {
           </div>
         </section>
         <section className="footer-area">
-          <h2 className="footer-area-text">
-            <Link to="/contact">
-              Ready to get in touch? <FaArrowRight size={"30px"} />
+          <h2 className="footer-area-text">Ready to book?</h2>
+          <h3 className="banner-h3">
+            <Link to="/meet">
+              contact
+              <FaArrowRight size={"30px"} />
             </Link>
-          </h2>
-          <h3 className="banner-h3">Right this way</h3>
+          </h3>
+          <section className="sm-links">
+            <div className="phone">555 - 555 - 9090</div>
+          </section>
         </section>
       </footer>
     </>

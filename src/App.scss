@@ -493,7 +493,7 @@ footer {
     font-weight: 400;
     letter-spacing: 5px;
     text-transform: uppercase;
-    max-width: 210px;
+    // max-width: 210px;
   }
 
   .social-posts-footer {
@@ -545,7 +545,7 @@ footer {
     .banner-h3 {
       max-width: 100%;
       font-size: 1.5rem;
-      margin-top: -50px;
+      margin-top: -120px;
       color: $off-white;
     }
   }
@@ -657,27 +657,104 @@ footer {
 
     // text-align: center;
     // align-content: center;
-    align-items: center;
+    align-items: flex-start;
     // flex-direction: column;
 
   .footer-area {
-    height: 100%;
+    display:flex;
+    flex-direction: column;
     width: 220px;
-    // height: 100px;
-    background-color: rebeccapurple;
-    // height: 100%;
-    // position: relative;
+    text-decoration: none;
+    align-items: center;
+    // justify-content: flex-start;
+    justify-items: center;
+    // align-items: flex-start;
+    // align-content: center;
+    // justify-items: center;
+
+    .footer-area-text {
+        font-family: "Montserrat", sans-serif;
+        font-size: x-small;
+        font-weight: 900;
+        color: $secondary-orange; 
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        text-align: center;
+
+
+    }
+
+    .banner-h3 {
+      display: flex;
+      width: fit-content;
+      font-size: x-large;
+      line-height: 45px;
+      border-bottom :$secondary-orange 3px dotted;
+      
+      a {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        color: inherit;
+        text-decoration: none;
+      }
+      svg {
+        scale: 0.75;
+      }
+
+    }
+    
+    .sm-links{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      // position: absolute;
+      // right: 20px;
+      // top: 20px;
+      font-family:"Dancing Script", cursive;
+      font-size: medium;
+      color: $secondary-orange;
+      font-weight: 700;
+
+        svg {
+          color: #4f77ca;
+          scale: 0.5;
+          margin-top: 5px;
+          margin-left: -10px;
+          transition: all 0.3s ease-in-out;
+        }
+
+        svg:hover{
+          color: $secondary-orange;
+        }
+
+        .phone {
+          padding-top: 10px;
+
+        }
+
+      }
+  
   }  
 
+  
   .footer-social-area {
-    // display: flex;
-    // flex-direction: column;
-    max-width: 400px;
     text-align: center;
-    // justify-content: center;
+    border-left :$secondary-orange 3px dotted;
+    border-right :$secondary-orange 3px dotted;
+    width: 300px;
+    padding: 0 20px;
 
     h3 {
-      width: 100%;
+      font-family: "Montserrat", sans-serif;
+      font-size: x-small;
+      font-weight: 900;
+      color: $main-text-navy; 
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      max-width: max-content;
+      padding-bottom: 10px;
     }
 
     .social-posts-footer {
@@ -685,7 +762,6 @@ footer {
         height: 70px;
         width: 70px;
       }
-      // max-width: 60vw;
     }
   }
 
